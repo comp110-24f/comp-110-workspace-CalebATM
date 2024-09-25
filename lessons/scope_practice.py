@@ -9,7 +9,7 @@ def remove_chars(msg: str, char: str) -> str:
     return copy
 
 
-word: str = "yoyo"
-
-print(remove_chars(word, "y"))
-print(remove_chars(word, "o"))
+if __name__ == "__main__":
+    word: str = "yoyo"
+    print(remove_chars(word, "y"))
+    print(remove_chars(word, "o"))
