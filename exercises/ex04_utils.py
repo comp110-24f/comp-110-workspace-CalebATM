@@ -5,6 +5,8 @@ __author__ = "730745780"
 
 def all(list: list[int], num: int) -> bool:
     """Returns True if all int in list are equal to num"""
+    if len(list) == 0:
+        return False
     idx: int = 0
     while idx < len(list):
         # checks if list item is not equal to num
@@ -30,6 +32,8 @@ def max(list1: list[int]) -> int:
 
 def is_equal(list1: list[int], list2: list[int]) -> bool:
     """Returns True if all corresponding values in lists are equal"""
+    if len(list1) != len(list2):
+        return False
     # counter variable
     idx: int = 0
     while idx < len(list1):
@@ -51,4 +55,4 @@ def extend(list1: list[int], list2: list[int]) -> None:
         idx += 1
 
 
-# backup commit was completed using the command line
+# backup commit was completed using the command line (my brother taught me)
