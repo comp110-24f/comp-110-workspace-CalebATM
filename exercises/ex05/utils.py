@@ -33,7 +33,7 @@ def sub(input: list[int], start: int, end: int) -> list:
 
 def add_at_index(input: list[int], elem: int, idx: int) -> None:
     """Modifies the input list to place the element at the given index."""
-    if idx >= len(input) or idx < 0:
+    if idx > len(input) or idx < 0:
         raise IndexError("Index is out of bounds for the input list")
     input.append(0)
     # This feels a bit convoluted, so here's an explanation:
