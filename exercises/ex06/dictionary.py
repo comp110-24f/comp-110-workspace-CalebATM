@@ -1,4 +1,4 @@
-"""Exercie 06 with Caleb Almer Matias!"""
+"""Exercise 06 with Caleb Almer Matias!"""
 
 __author__ = "730745780"
 
@@ -35,6 +35,8 @@ def invert(pairs: dict[str, str]) -> dict[str, str]:
 def favorite_color(ppl_colors: dict[str, str]) -> str:
     """Returns the mode color (appears most often)"""
     color_list: list[str] = list()
+    if len(ppl_colors) == 0:  # edge case (empty dict)
+        return ""
     # puts all the colors in a list
     for key in ppl_colors:
         color_list.append(ppl_colors[key])
@@ -88,8 +90,10 @@ def alphabetizer(input: list[str]) -> dict[str, list[str]]:
 def update_attendance(input: dict[str, list[str]], day: str, student: str) -> None:
     """Updates the given dict with the new attendance information"""
     if day in input:  # checks if the day argument is already a key
-        # adds the student argument under the appropriate day key
-        input[day].append(student)
+        # determines if student is already in key's list
+        if student not in input[day]:
+            # adds the student argument under the appropriate day key
+            input[day].append(student)
     else:
         # makes a new key-value pair if a particular day does not have a key yet
         input[day] = [student]
