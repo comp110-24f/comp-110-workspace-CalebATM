@@ -16,9 +16,9 @@ def invert(pairs: dict[str, str]) -> dict[str, str]:
         keys_list.append(key)
         values_list.append(pairs[key])
     # after adding all the values to a list,
-    # this next segement basically checks for a duplicate
+    # this next segment basically checks for a duplicate
     # value in the values_list by iterating over the list
-    # with a nested for loop
+    # with a nested for loop BEFORE adding them to the dict
     for value1 in values_list:
         duplicates: int = 0
         for value2 in values_list:
