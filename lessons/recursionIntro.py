@@ -64,3 +64,18 @@ print(last(one))
 print(last(courses))
 print(last2(one))
 print(last2(courses))
+
+
+def recursive_range(start: int, end: int) -> Node | None:
+    """Recursively build a linked list from start to end, not inclusive."""
+    if start > end:
+        raise ValueError("Invalid arguments, start > end.")
+    if start == end:
+        return None
+    else:
+        rest: Node | None = recursive_range(start + 1, end)
+        return Node(start, rest)
+
+
+linked_list: Node | None = recursive_range(110, 113)
+print(linked_list)

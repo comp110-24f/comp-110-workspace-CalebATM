@@ -98,3 +98,6 @@ def scale(head: Node | None, factor: int) -> Node | None:
         # Multiplies the value of Node being accessed and sets its .next value
         # to whatever the rest variable brought back
         return Node(head.value * factor, rest)
+
+
+print(scale(linkify([1, 2, 3, 4]), 3))
